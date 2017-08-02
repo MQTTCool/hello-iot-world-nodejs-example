@@ -3,7 +3,7 @@
 The **Hello IoT World Demo** is a simple real-time telemetry application based
 on MQTT.Cool.
 
-![screenshot](screen-large.png)
+![screenshot](screen-large.gif)
 
 ## Details
 
@@ -68,7 +68,7 @@ by using `npm`:
   ```
 
 * From the `src/folder` folder, get the [`MQTT.js`](https://github.com/mqttjs/MQTT.js)
-package, which is required by the feed simulator application
+package, which is required by the feed simulator application:
 
   ```sh
   $ npm install
@@ -87,10 +87,10 @@ mqttcool.openSession('http://localhost:8080', {
 
 and change it accordingly.
 
-Further, the demo will look for the **mosquitto** alias, which is predefined in
-the default MQTT.Cool configuration. Once more, if you need to target a
-different MQTT broker, and provided that relative connection parameters are
-already defined as shown above, modify the following line in
+Further, the demo will look for the **mosquitto** alias, which is one of the
+predefined configurations in `mqtt_master_connector_conf.xml`. Once more, if you
+need to target a different MQTT broker, and provided that relative connection
+parameters are already defined as shown above, modify the following line in
 `src/js/client/client.js`:
 
 ```js
@@ -99,6 +99,14 @@ var mqttClient = mqttCoolSession.createClient('mosquitto');
 
 and change it by replacing **mosquitto** with the new alias that maps the MQTT
 broker you are going to use.
+
+Lastly, in the case you have started the chosen MQTT broker from a different
+network address, ensure that the feed simulator can contact it by providing the
+right URI in the following line in `src/js/feed/feed.js`:
+
+```js
+const client = mqtt.connect('mqtt://localhost:1883');
+```
 
 ## Launch
 
