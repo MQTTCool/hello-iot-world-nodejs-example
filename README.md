@@ -111,7 +111,7 @@ const client = mqtt.connect('mqtt://localhost:1883');
 ## Launch
 
 From the `src/feed` folder, run the feed simulator application to publish
-simulated telemetry metrics:
+simulated telemetry data:
 
 ```sh
 node feed.js
