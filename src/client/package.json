@@ -1,0 +1,12 @@
+{
+  "name": "helloworld-iot-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "client.js",
+  "dependencies": {
+    "ansi": "^0.3.1",
+    "gauge": "^2.7.4",
+    "mqtt.cool-node-client": "^1.0.0",
+    "signal-exit": "^3.0.2"
+  }
+}

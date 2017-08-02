@@ -1,0 +1,9 @@
+{
+  "name": "feed",
+  "version": "1.0.0",
+  "description": "Feed simulator",
+  "main": "feed.js",
+  "dependencies": {
+    "mqtt": "^2.10.0"
+  }
+}
