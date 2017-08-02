@@ -105,7 +105,7 @@ mqttcool.openSession('http://localhost:8080', {
  */
 function log(message) {
   cursor.reset()
-    .goto(1, 1).horizontalAbsolute(0).eraseLine()
+    .goto(1, 2).horizontalAbsolute(0).eraseLine()
     .yellow().bold()
     .write('Status: ')
     .bg.magenta()
@@ -119,7 +119,7 @@ function log(message) {
  */
 function updateRPMData(rpm) {
   cursor.reset()
-    .goto(1, 3).horizontalAbsolute(0).eraseLine()
+    .goto(1, 4).horizontalAbsolute(0).eraseLine()
     .bg.grey()
     .white().bold()
     .write('RPM:   ')
@@ -135,7 +135,7 @@ function updateRPMData(rpm) {
  */
 function updateSpeedData(speed) {
   cursor.reset()
-    .goto(1, 4).horizontalAbsolute(0).eraseLine()
+    .goto(1, 5).horizontalAbsolute(0).eraseLine()
     .bg.grey()
     .white().bold()
     .write('Speed: ')

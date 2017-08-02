@@ -102,7 +102,7 @@ broker you are going to use.
 
 Lastly, in the case you have started the chosen MQTT broker from a different
 network address, ensure that the feed simulator can contact it by providing the
-right URI in the following line in `src/js/feed/feed.js`:
+right URI in the following line of `src/js/feed/feed.js`:
 
 ```js
 const client = mqtt.connect('mqtt://localhost:1883');
