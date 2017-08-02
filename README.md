@@ -59,14 +59,26 @@ information on how to configure broker connection parameters):
 
 * Launch the MQTT.Cool server.
 * Download this project.
-* As the lastest version of the MQTT.Cool JavaScript library is always available
-through [`unpkg`](https://unpkg.com/#/), it is hot-linked in the html page.
+* From the `src/client` folder, get the [`mqtt.cool-node-client`](https://www.npmjs.com/package/mqtt.cool-node-client)
+package (along with all other dependencies required by the client application)
+by using `npm`:
+
+  ```sh
+  $ npm install
+  ```
+
+* From the `src/folder` folder, get the [`MQTT.js`](https://github.com/mqttjs/MQTT.js)
+package, which is required by the feed simulator application
+
+  ```sh
+  $ npm install
+  ```
 
 
 ## Configure
 
 The demo assumes that the MQTT.Cool server is launched from localhost, but if
-you need to target a different server, search in `src/js/client/client.js`
+you need to target a different server, search in `src/client/client.js`
 this line:
 
 ```js
@@ -90,37 +102,30 @@ broker you are going to use.
 
 ## Launch
 
-Open your browser and point it to
-[http://localhost:8080/Hello_IoT_World](http://localhost:8080/Hello_IoT_World),
-or to the address according to the host and/or the name of the folder where you
-deployed the project.
+From the `src/client` folder, run:
+
+```sh
+$ node client.js
+```
 
 From the `src/feed` folder, run the feed simulator application to publish
 simulated telemetry metrics:
 
-* On Linux systems;
+```sh
+node feed.js
+```
 
-  ```sh
-  $ sh bin/startFeed
-  ```
-
-* On Window systems:
-
-  ```sh
-  $ bin\startFeed.bat
-  ```
-
-and immediately the gauges reflect updates according to the received real-time
-metrics.
+and immediately the console from which the client has been launched reflect
+updates according to the received real-time metrics.
 
 ## See Also
 
 <!-- START RELATED_ENTRIES -->
 
-* [MQTT.Cool - Basic Chat Demo - HTML Client](https://github.com/MQTTCool/MQTT.Cool-example-Chat-client-javascript)
+* [MQTT.Cool - Hello IoT World Demo - HTML Client](https://github.com/MQTTCool/MQTT.Cool-example-Hello_IoT_World-client-javascript)
 
 ## MQTT.Cool Compatibility Notes
 
-* Compatible with MQTT.Cool SDK for Web Client version 1.0.0 or newer.
+* Compatible with MQTT.Cool SDK for Node.js Client version 1.0.0 or newer.
 * Compatible with MQTT.Cool since version 1.0 or newer.
 
