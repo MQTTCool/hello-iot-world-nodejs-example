@@ -110,12 +110,6 @@ const client = mqtt.connect('mqtt://localhost:1883');
 
 ## Launch
 
-From the `src/client` folder, run:
-
-```sh
-$ node client.js
-```
-
 From the `src/feed` folder, run the feed simulator application to publish
 simulated telemetry metrics:
 
@@ -123,8 +117,14 @@ simulated telemetry metrics:
 node feed.js
 ```
 
-and immediately the console from which the client has been launched reflect
-updates according to the received real-time metrics.
+From the `src/client` folder, run the client application:
+
+```sh
+$ node client.js
+```
+
+and immediately the console reflects updates according to the received
+real-time metrics.
 
 ## See Also
 
