@@ -134,6 +134,6 @@ real-time metrics.
 
 ## MQTT.Cool Compatibility Notes
 
-* Compatible with MQTT.Cool SDK for Node.js Client version 1.0.0 or newer.
+* Compatible with MQTT.Cool SDK for Node.js Clients version 1.0.0 or newer.
 * Compatible with MQTT.Cool since version 1.0 or newer.
 
