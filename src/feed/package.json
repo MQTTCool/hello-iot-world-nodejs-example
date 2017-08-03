@@ -1,9 +1,31 @@
 {
-  "name": "feed",
+  "name": "helloworld-iot-feed-client",
   "version": "1.0.0",
-  "description": "Feed simulator",
+  "description": "Feed simulator for publishing telemetry data for the MQTT.Cool Hello IoT World demo",
+  "keywords": [
+    "mqtt.cool",
+    "mqtt",
+    "cool",
+    "realtime",
+    "real-time",
+    "telemetry",
+    "feed"
+  ],
+  "homepage": "http://www.lightstreamer.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MQTTCool/MQTT.Cool-example-Hello_IoT_World-client-node"
+  },
+  "bugs": {
+    "url": "http://forum.lightstreamer.com/",
+    "email": "support@lightstreamer.com"
+  },
+  "author": {
+    "name": "Lightstreamer Srl",
+    "email": "support@lightstreamer.com"
+  },
   "main": "feed.js",
   "dependencies": {
-    "mqtt": "^2.10.0"
+    "mqtt": "^2.11.0"
   }
 }

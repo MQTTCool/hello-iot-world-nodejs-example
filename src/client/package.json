@@ -1,7 +1,28 @@
 {
-  "name": "helloworld-iot-client",
+  "name": "helloworld-iot-node-client",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple real-time client application based on MQTT.Cool",
+  "keywords": [
+    "mqtt.cool",
+    "mqtt",
+    "cool",
+    "realtime",
+    "real-time",
+    "telemetry"
+  ],
+  "homepage": "http://www.lightstreamer.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MQTTCool/MQTT.Cool-example-Hello_IoT_World-client-node"
+  },
+  "bugs": {
+    "url": "http://forum.lightstreamer.com/",
+    "email": "support@lightstreamer.com"
+  },
+  "author": {
+    "name": "Lightstreamer Srl",
+    "email": "support@lightstreamer.com"
+  },
   "main": "client.js",
   "dependencies": {
     "ansi": "^0.3.1",
