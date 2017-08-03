@@ -1,4 +1,4 @@
-# MQTT.Cool - Hello IoT World Demo - Node.Js Client
+# MQTT.Cool - Hello IoT World Demo - Node.js Client
 
 The **Hello IoT World Demo** is a simple real-time telemetry application based
 on MQTT.Cool.
