@@ -1,5 +1,6 @@
 /*
-  MQTT.Cool - http://www.lightstreamer.com
+  MQTT.Cool - https://mqtt.cool
+
   Hello IoT World Demo
 
   Copyright (c) Lightstreamer Srl
@@ -22,6 +23,9 @@ const onExit = require('signal-exit');
 const ansi = require('ansi');
 const cursor = ansi(process.stdout);
 
+// Target MQTT.Cool address. Change it with if required.
+const MQTT_COOL_URL = 'http://localhost:8080';
+
 // Reset used cursor on process exit.
 onExit(function() {
   cursor.reset();
@@ -29,7 +33,7 @@ onExit(function() {
 
 // Connect to the MQTT.Cool server.
 log('Connecting to MQTT.Cool...');
-mqttcool.openSession('http://localhost:8080', {
+mqttcool.openSession(MQTT_COOL_URL, {
 
   onConnectionFailure: function(errorType, errorCode, errorMessage) {
     log('MQTT.Cool connection failure ' + errorType);
