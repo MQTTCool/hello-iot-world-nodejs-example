@@ -11,13 +11,13 @@
     "telemetry",
     "feed"
   ],
-  "homepage": "http://www.lightstreamer.com",
+  "homepage": "https://mqtt.cool",
   "repository": {
     "type": "git",
     "url": "https://github.com/MQTTCool/MQTT.Cool-example-Hello_IoT_World-client-node"
   },
   "bugs": {
-    "url": "http://forum.lightstreamer.com/",
+    "url": "https://mqtt.cool/forum",
     "email": "support@lightstreamer.com"
   },
   "author": {
