@@ -8,7 +8,7 @@ on MQTT.Cool.
 ## Details
 
 The **Hello IoT World Demo** uses the
-*[MQTT.Cool Node.js Client API](http://www.lightstreamer.com/api/mqtt.cool-nodejs-client/latest/)*
+*[MQTT.Cool Node.js Client API](https://mqtt.cool/res/mqtt.cool-nodejs-client-sdk/1.2.0/doc/index.html)*
 to show how MQTT.Cool can be used to send real-time telemetry data through the
 Web.
 
@@ -36,9 +36,9 @@ follows these steps.
 * As prerequisite, this demo needs an up and running MQTT broker. You can choose
 whatever MQTT broker you prefer, or may also use one of the available public
 broker (an up-to-date list is maintained at
-[https://github.com/mqtt/mqtt.github.io/wiki/public_brokers]()).
-* Configure an MQTT.Cool instance. Please refer to Lightstreamer web site
-[download page](http://download.lightstreamer.com/) to find the MQTT.Cool
+https://github.com/mqtt/mqtt.github.io/wiki/public_brokers).
+* Configure an MQTT.Cool instance. Please refer to mqtt.cool web site
+[download page](https://mqtt.cool/download/latest-server) to find the MQTT.Cool
 download package. MQTT.Cool comes with a set of predefined configurations for
 connecting with local MQTT server instances, as well as with the most common
 publicly accessible brokers. If you want to provide a new custom configuration,
@@ -59,21 +59,18 @@ information on how to configure broker connection parameters):
 
 * Launch the MQTT.Cool server.
 * Download this project.
-* From the `src/client` folder, get the [`mqtt.cool-node-client`](https://www.npmjs.com/package/mqtt.cool-node-client)
-package (along with all other dependencies required by the client application)
-by using `npm`:
+* If required, install Node.js
+* From the `src/client` folder, locally install the client application (based on the [MQTT.Cool Node.js Client API](https://mqtt.cool/res/mqtt.cool-nodejs-client-sdk/1.2.0/doc/index.html)), by using `npm`:
 
   ```sh
   $ npm install
   ```
 
-* From the `src/folder` folder, get the [`MQTT.js`](https://github.com/mqttjs/MQTT.js)
-package, which is required by the feed simulator application:
+* From the `src/feed` folder, locally install the feed simulator application:
 
   ```sh
   $ npm install
   ```
-
 
 ## Configure
 
@@ -82,7 +79,7 @@ you need to target a different server, search in `src/client/client.js`
 this line:
 
 ```js
-mqttcool.openSession('http://localhost:8080', {
+const MQTT_COOL_URL = 'http://localhost:8080';
 ```
 
 and change it accordingly.
@@ -91,7 +88,7 @@ Further, the demo will look for the **mosquitto** alias, which is one of the
 predefined configurations in `mqtt_master_connector_conf.xml`. Once more, if you
 need to target a different MQTT broker, and provided that relative connection
 parameters are already defined as shown above, modify the following line in
-`src/js/client/client.js`:
+`src/client/client.js`:
 
 ```js
 var mqttClient = mqttCoolSession.createClient('mosquitto');
@@ -100,22 +97,17 @@ var mqttClient = mqttCoolSession.createClient('mosquitto');
 and change it by replacing **mosquitto** with the new alias that maps the MQTT
 broker you are going to use.
 
-Lastly, in the case you have started the chosen MQTT broker from a different
-network address, ensure that the feed simulator can contact it by providing the
-right URI in the following line of `src/js/feed/feed.js`:
-
-```js
-const client = mqtt.connect('mqtt://localhost:1883');
-```
-
 ## Launch
 
 From the `src/feed` folder, run the feed simulator application to publish
 simulated telemetry data:
 
 ```sh
-node feed.js
+node feed.js <url_broker>
 ```
+
+where `url_broker` is the url of the MQTT broker relative to the alias in use in
+the client application.
 
 From the `src/client` folder, run the client application:
 
@@ -128,9 +120,7 @@ real-time metrics.
 
 ## See Also
 
-<!-- START RELATED_ENTRIES -->
-
-* [MQTT.Cool - Hello IoT World Demo - HTML Client](https://github.com/MQTTCool/MQTT.Cool-example-Hello_IoT_World-client-javascript)
+* [Check out all other demos on MQTT.Cool site](https://mqtt.cool/demos)
 
 ## MQTT.Cool Compatibility Notes
 
