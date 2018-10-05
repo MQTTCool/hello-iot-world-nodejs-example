@@ -1,5 +1,6 @@
 /*
-  MQTT.Cool - http://www.lightstreamer.com
+  MQTT.Cool - https://mqtt.cool
+
   Hello IoT World Demo
 
   Copyright (c) Lightstreamer Srl
@@ -18,8 +19,14 @@
 */
 const mqtt = require('mqtt');
 
-// Connect to the MQTT broker listening at localhost on port 1883.
-const client = mqtt.connect('mqtt://localhost:1883');
+// Connect to the MQTT broker passed via cmd line.
+var urlBroker = process.argv[2];
+if (!urlBroker) {
+  console.warn('Please specify a valid URL broker');
+  process.exit(1);
+}
+
+const client = mqtt.connect(urlBroker);
 
 // Upon successful connection, start simulation.
 client.on('connect', function () {
