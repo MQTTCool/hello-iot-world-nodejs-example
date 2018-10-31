@@ -8,7 +8,7 @@ on MQTT.Cool.
 ## Details
 
 The **Hello IoT World Demo** uses the
-*[MQTT.Cool Node.js Client API](https://mqtt.cool/res/mqtt.cool-nodejs-client-sdk/1.2.0/doc/index.html)*
+*[MQTT.Cool Node.js Client API](lhttps://mqtt.cool/docs/nodejs-client-sdk/api/index.html)*
 to show how MQTT.Cool can be used to send real-time telemetry data through the
 Web.
 
@@ -60,7 +60,7 @@ information on how to configure broker connection parameters):
 * Launch the MQTT.Cool server.
 * Download this project.
 * If required, install Node.js
-* From the `src/client` folder, locally install the client application (based on the [MQTT.Cool Node.js Client API](https://mqtt.cool/res/mqtt.cool-nodejs-client-sdk/1.2.0/doc/index.html)), by using `npm`:
+* From the `src/client` folder, locally install the client application (based on the [MQTT.Cool Node.js Client API](https://mqtt.cool/docs/nodejs-client-sdk/api/index.html)), by using `npm`:
 
   ```sh
   $ npm install
