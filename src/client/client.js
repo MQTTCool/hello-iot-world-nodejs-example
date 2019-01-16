@@ -24,7 +24,7 @@ const ansi = require('ansi');
 const cursor = ansi(process.stdout);
 
 // Target MQTT.Cool address. Change it with if required.
-const MQTT_COOL_URL = 'http://localhost:8080';
+const MQTT_COOL_URL = 'https://cloud.mqtt.cool';
 
 // Reset used cursor on process exit.
 onExit(function() {
@@ -33,7 +33,7 @@ onExit(function() {
 
 // Connect to the MQTT.Cool server.
 log('Connecting to MQTT.Cool...');
-mqttcool.openSession(MQTT_COOL_URL, {
+mqttcool.openSession(MQTT_COOL_URL, 'demouser', '', {
 
   onConnectionFailure: function(errorType, errorCode, errorMessage) {
     log('MQTT.Cool connection failure ' + errorType);
@@ -44,7 +44,7 @@ mqttcool.openSession(MQTT_COOL_URL, {
     // Get a client instance, which will connect to the MQTT broker mapped by
     // the alias "mosquitto". The instance will also be used later to
     // re-subscribe for updating the frequency update.
-    var mqttClient = mqttCoolSession.createClient('mosquitto');
+    var mqttClient = mqttCoolSession.createClient('tcp://broker.mqtt.cool:1883');
 
     // Connect to the MQTT broker.
     mqttClient.connect({

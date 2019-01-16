@@ -28,6 +28,12 @@ client and targeted to the broker (in this case, the subscriptions to telemetry
 topics), as well as for responses (subscription acks) and Application Messages
 (telemetry data) coming from the broker and directed to the client.
 
+### Overall Architecture
+
+Here the overall architecture of the demo:
+
+![](hello-iot-world-nodejs-demo-architecture.png)
+
 ## Install
 
 If you want to install a version of this demo pointing to your local MQTT.Cool,
