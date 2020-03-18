@@ -48,8 +48,8 @@ https://github.com/mqtt/mqtt.github.io/wiki/public_brokers).
 download package. MQTT.Cool comes with a set of predefined configurations for
 connecting with local MQTT server instances, as well as with the most common
 publicly accessible brokers. If you want to provide a new custom configuration,
-open the `mqtt_master_connector_conf.xml` file located under
-`<MQTT.COOL_HOME>/mqtt_connectors` and provide a set of entries similar to the
+open the `brokers_configuration.xml` file located under
+`<MQTT.COOL_HOME>/conf` and provide a set of entries similar to the
 following (please refer to the inline documentation for more in-depth
 information on how to configure broker connection parameters):
 
@@ -91,7 +91,7 @@ const MQTT_COOL_URL = 'http://localhost:8080';
 and change it accordingly.
 
 Further, the demo will look for the **mosquitto** alias, which is one of the
-predefined configurations in `mqtt_master_connector_conf.xml`. Once more, if you
+predefined configurations in `brokers_configuration.xml`. Once more, if you
 need to target a different MQTT broker, and provided that relative connection
 parameters are already defined as shown above, modify the following line in
 `src/client/client.js`:
@@ -131,5 +131,5 @@ real-time metrics.
 ## MQTT.Cool Compatibility Notes
 
 * Compatible with MQTT.Cool SDK for Node.js Clients version 1.0.0 or newer.
-* Compatible with MQTT.Cool version 1.x.x.
+* Compatible with MQTT.Cool since version 2.0.0 or newver.
 
