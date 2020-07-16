@@ -109,7 +109,7 @@ From the `src/feed` folder, run the feed simulator application to publish
 simulated telemetry data:
 
 ```sh
-node feed.js <url_broker>
+$ node feed.js <url_broker>
 ```
 
 where `url_broker` is the url of the MQTT broker relative to the alias in use in
