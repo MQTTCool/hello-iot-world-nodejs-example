@@ -27,7 +27,7 @@
   "dependencies": {
     "ansi": "^0.3.1",
     "gauge": "^2.7.4",
-    "mqtt.cool-node-client": "^1.0.0",
+    "mqtt.cool-node-client": "^2.0.0",
     "signal-exit": "^3.0.2"
   }
 }
